@@ -11,8 +11,8 @@
 # **************************************************************************** #
 
 all:
-	#@mkdir -p /home/ade-bast/data/mysql;
-	#@mkdir -p /home/ade-bast/data/html;
+	@mkdir -p /home/ade-bast/data/mysql;
+	@mkdir -p /home/ade-bast/data/html;
 	docker compose -f ./srcs/docker-compose.yml up -d --build
 
 up:
@@ -25,8 +25,8 @@ clean: down
 	docker compose -f ./srcs/docker-compose.yml down --rmi all -v
 
 fclean: clean
-	#@sudo rm -rf /home/ade-bast/data/mysql;
-	#@sudo rm -rf /home/ade-bast/data/html;
+	@sudo rm -rf /home/ade-bast/data/mysql;
+	@sudo rm -rf /home/ade-bast/data/html;
 
 re: fclean all
 
